@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Tournament registration</title>
+</head>
+
+<body>
+    <h1 class="head">Tournament registration form</h1>
+    <div class="formContainer">
+    <form action="">
+    <div class="wrapInfo">
+        <h1>Name Info</h1>
+        <div class="Info">
+                <div class="inputContainer">
+                    <label for="name">Name</label>
+                    <input type="name" name="name" placeholder="Your name" required>
+                </div>
+
+                <div class="inputContainer">
+                    <label for="Nickname">Nickname</label>
+                    <input type="name" name="Nickname" placeholder="Your nickname" required>
+                </div>
+
+                <div class="inputContainer">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" placeholder="test@test.test" required>
+                </div>
+
+            
+        </div>
+    </div>
+    <div class="wrapInfo">
+        <h1>Personal info</h1>
+        <div class="Info">
+                <div class="inputContainer"> <label for="Birthday">Birthday</label>
+                    <input type="date" name="Birthday" required>
+                </div>
+                <div class="row">
+                    <div class="rowItem">
+                        <label for="sex">Men</label>
+                        <input type="radio" name="sex" value="Man" required checked>
+                    </div>
+                    <div class="rowItem">
+                        <label for="sex">Woman</label>
+                        <input type="radio" name="sex" value="Woman" required>
+                    </div>
+
+                </div>
+                <div class="inputContainer">
+                    <label for="country">Country</label>
+                    <input list="countryList" id="country" name="country" placeholder="Enter a country">
+                    <datalist id="countryList">
+                        <option value="United States">
+                        <option value="Canada">
+                        <option value="Germany">
+                        <option value="France">
+                        <option value="Italy">
+                        <option value="Spain">
+                        <option value="United Kingdom">
+                        <option value="Ukraine">
+                        <option value="Poland">
+                        <option value="Japan">
+                        <option value="China">
+                        <option value="India">
+                        <option value="Australia">
+                        <option value="Brazil">
+                        <option value="South Africa">
+                    </datalist>
+                </div>
+            
+        </div>
+    </div>
+    <div class="wrapInfo">
+        <h1>Game Info</h1>
+        <div class="Info">
+            
+            
+                <div class="inputContainer uniq">
+                    <label for="hero">Choose a hero</label>
+                    <select id="attribute" name="attribute" onchange="showHeroSelect(this.value)">
+                        <option value="">Choose an attribute</option>
+                        <option value="strength">🟥 Strength</option>
+                        <option value="agility">🟩 Agility</option>
+                        <option value="intelligence">🟦 Intelligence</option>
+                        <option value="universal">🟪 Universal</option>
+                    </select>
+                    <div id="strength" class="heroSelect">
+                        <label for="strength-heroes">Choose a Strength Hero:</label>
+                        <select id="strength-heroes" class="hero">
+                            <option value="Axe">Axe</option>
+                            <option value="Centaur Warrunner">Centaur Warrunner</option>
+                            <option value="Clockwerk">Clockwerk</option>
+                            <option value="Doom">Doom</option>
+                            <option value="Earthshaker">Earthshaker</option>
+                            <option value="Lifestealer">Lifestealer</option>
+                            <option value="Pudge">Pudge</option>
+                            <option value="Slardar">Slardar</option>
+                            <option value="Sven">Sven</option>
+                            <option value="Tidehunter">Tidehunter</option>
+                            <option value="Tiny">Tiny</option>
+                            <option value="Wraith King">Wraith King</option>
+                        </select>
+                    </div>
+
+                    <div id="agility" class="heroSelect">
+                        <label for="agility-heroes">Choose an Agility Hero:</label>
+                        <select id="agility-heroes" class="hero">
+                            <option value="Anti-Mage">Anti-Mage</option>
+                            <option value="Drow Ranger">Drow Ranger</option>
+                            <option value="Juggernaut">Juggernaut</option>
+                            <option value="Phantom Assassin">Phantom Assassin</option>
+                            <option value="Riki">Riki</option>
+                            <option value="Sniper">Sniper</option>
+                            <option value="Templar Assassin">Templar Assassin</option>
+                            <option value="Terrorblade">Terrorblade</option>
+                            <option value="Ursa">Ursa</option>
+                            <option value="Viper">Viper</option>
+                            <option value="Weaver">Weaver</option>
+                        </select>
+                    </div>
+
+                    <div id="intelligence" class="heroSelect">
+                        <label for="intelligence-heroes">Choose an Intelligence Hero:</label>
+                        <select id="intelligence-heroes" class="hero">
+                            <option value="Crystal Maiden">Crystal Maiden</option>
+                            <option value="Lina">Lina</option>
+                            <option value="Lion">Lion</option>
+                            <option value="Pugna">Pugna</option>
+                            <option value="Rubick">Rubick</option>
+                            <option value="Shadow Shaman">Shadow Shaman</option>
+                            <option value="Skywrath Mage">Skywrath Mage</option>
+                            <option value="Storm Spirit">Storm Spirit</option>
+                            <option value="Tinker">Tinker</option>
+                            <option value="Zeus">Zeus</option>
+                        </select>
+                    </div>
+
+                    <div id="universal" class="heroSelect">
+                        <label for="universal-heroes">Choose a Universal Hero:</label>
+                        <select id="universal-heroes" class="hero">
+                            <option value="Bane">Bane</option>
+                            <option value="Broodmother">Broodmother</option>
+                            <option value="Invoker">Invoker</option>
+                            <option value="Marci">Marci</option>
+                            <option value="Muerta">Muerta</option>
+                            <option value="Pangolier">Pangolier</option>
+                            <option value="Primal Beast">Primal Beast</option>
+                            <option value="Void Spirit">Void Spirit</option>
+                            <option value="Windranger">Windranger</option>
+                            <option value="Dark Willow">Dark Willow</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="inputContainer">
+                    <label for="age">Age</label>
+                    <input type="range" name="age" list="ageList" min="15" max="60">
+                    <datalist id="ageList">
+                        <option value="15">15</option>
+                        <option value="25">25</option>
+                        <option value="35">35</option>
+                        <option value="45">45</option>
+                        <option value="55">55</option>
+                        <option value="60">60</option>
+                    </datalist>
+                </div>
+                <div class="inputContainer">
+                    <label for="comment">Add comments</label>
+                    <textarea name="text" id="comment" placeholder="Comment..." rows="5" cols="33"></textarea>
+                </div>
+
+            
+        </div>
+    </div>
+        <div class="Submit">
+        <input type="submit" class="Btn" value="Submit"> 
+        <input type="reset" class="Btn" value="Reset"> 
+    </div>
+    </div>
+</form>
+</div>
+
+    <script>
+        function showHeroSelect(attribute) {
+            const heroSelects = document.querySelectorAll('.heroSelect');
+            heroSelects.forEach(select => select.style.display = 'none');
+            if (attribute) {
+                const selectedHeroSelect = document.getElementById(attribute);
+                selectedHeroSelect.style.display = 'block';
+            }
+        }
+
+    </script>
+</body>
+<script></script>
+
+</html>
